@@ -2,7 +2,7 @@ package org.nor.sftp;
 
 import java.net.URI;
 
-public enum FtpInfo {
+public enum SFtpInfo {
 
   USER {
     String get(URI uri) {

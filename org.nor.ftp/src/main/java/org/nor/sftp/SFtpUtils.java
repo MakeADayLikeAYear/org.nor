@@ -163,10 +163,10 @@ public class SFtpUtils {
    */
   private static Session newSession(URI uri, Map<String, String> props) throws SftpException {
     try {
-      String user = (String) FtpInfo.USER.get(uri);
-      String pass = (String) FtpInfo.PASS.get(uri);
-      String host = (String) FtpInfo.HOST.get(uri);
-      int port = (int) FtpInfo.PORT.get(uri);
+      String user = (String) SFtpInfo.USER.get(uri);
+      String pass = (String) SFtpInfo.PASS.get(uri);
+      String host = (String) SFtpInfo.HOST.get(uri);
+      int port = (int) SFtpInfo.PORT.get(uri);
       log.debug("Host : [{}] Port : [{}] User : [{}] Pass : [{}]",
           new Object[] {host, port, user, pass});
 

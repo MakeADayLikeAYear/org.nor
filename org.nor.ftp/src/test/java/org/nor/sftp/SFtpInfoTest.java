@@ -8,7 +8,7 @@ import java.util.Properties;
 import org.junit.Before;
 import org.junit.Test;
 
-public class FtpInfoTest {
+public class SFtpInfoTest {
   
   Properties prop = new Properties();
 
@@ -27,7 +27,7 @@ public class FtpInfoTest {
   @Test
   public void FtpInfo() throws Exception {
     URI uri = new URI(prop.getProperty("sftpURI"));
-    Object host = FtpInfo.HOST.get(uri);
+    Object host = SFtpInfo.HOST.get(uri);
     System.out.println(host);
   }
 }
