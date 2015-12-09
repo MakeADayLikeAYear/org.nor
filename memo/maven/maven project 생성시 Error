@@ -1,0 +1,19 @@
+Could not resolve archetype org.apache.maven.archetypes:maven-archetype-quickstart:1.1 from any of the configured repositories.
+Could not resolve artifact org.apache.maven.archetypes:maven-archetype-quickstart:pom:1.1
+Failure to transfer org.apache.maven.archetypes:maven-archetype-quickstart:pom:1.1 from https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced. Original error: Could not transfer artifact org.apache.maven.archetypes:maven-archetype-quickstart:pom:1.1 from/to central (https://repo.maven.apache.org/maven2): sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+Failure to transfer org.apache.maven.archetypes:maven-archetype-quickstart:pom:1.1 from https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced. Original error: Could not transfer artifact org.apache.maven.archetypes:maven-archetype-quickstart:pom:1.1 from/to central (https://repo.maven.apache.org/maven2): sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+
+
+maven-archetype-quickstart 로 프로젝트 생성시 위와 같은 Error가 발생할 때
+
+원인 : 인증서 문제로 인하여 자원을 받지 못하는 경우에 해당함.
+조치 : 다른 프로젝트를 통하여 "maven-archetype-quickstart" 자원을 받은 후 다시 생성하면 받아진다.
+        단 다른 프로젝트에 인증서는 조치를 해야한다. (jssecacerts)  
+
+다른 프로젝트에 추가해야할 내용
+<dependency>
+  <groupId>org.apache.maven.archetypes</groupId>
+  <artifactId>maven-archetype-quickstart</artifactId>
+  <version>1.1</version>
+</dependency>
+ 
