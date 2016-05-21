@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="46" started-at="2016-05-21T01:54:56Z" finished-at="2016-05-21T01:54:56Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="46" started-at="2016-05-21T01:54:56Z" finished-at="2016-05-21T01:54:56Z">
+      <class name="org.nor.file.find.XfdlTest">
+        <test-method status="PASS" signature="testgetFileList()[pri:0, instance:org.nor.file.find.XfdlTest@481a15ff]" name="testgetFileList" duration-ms="35" started-at="2016-05-21T10:54:56Z" finished-at="2016-05-21T10:54:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testgetFileList -->
+      </class> <!-- org.nor.file.find.XfdlTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
