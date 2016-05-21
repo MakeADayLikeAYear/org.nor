@@ -9,11 +9,11 @@
 
 	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<!-- <file>${APP_HOME}/logs/file.log</file> -->
-		<file>../logs/fileSearch.log</file>
+		<file>D:/04_workspace/logs/fileSearch.log</file>
 	
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<!-- 파일이 하루에 한개씩 생성된다 -->
-			<fileNamePattern>./logs/fileSearch.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+			<fileNamePattern>D:/04_workspace/logs/fileSearch.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
 			<!-- maxHIstory 설정은 위 부분에 롤링 정책에 따라 적용되 된다고 보면된다. 위 설정데로 라면 30일이 지난 파일은 삭제가 된다. -->
 			<maxHistory>30</maxHistory>
 			<totalSizeCap>3GB</totalSizeCap>
