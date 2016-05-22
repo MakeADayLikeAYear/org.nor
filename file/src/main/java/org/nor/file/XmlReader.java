@@ -42,7 +42,7 @@ public class XmlReader {
 
 		return norNode;
 	}
-	
+
 	/**
 	 * <pre>
 	 * nodeList 로 부터 norNode VO 형태로 데이터를 생성한다.
@@ -97,7 +97,7 @@ public class XmlReader {
 			}
 		}
 	}
-	
+
 	/**
 	 * <pre>
 	 * 특정경로의 파일을 Document 로 parse 한다.
@@ -110,7 +110,7 @@ public class XmlReader {
 	public static Document getDocument(String path) throws Exception {
 		return createDomParser(new FileInputStream(path));
 	}
-	
+
 	/**
 	 * <pre>
 	 * 특정경로의 파일을 parse 해서 NorNode VO로 return 한다.
@@ -120,8 +120,19 @@ public class XmlReader {
 	 * @return
 	 * @throws Exception
 	 */
-	public static NorNode getNorNode(String path) throws Exception {
-		return getNoList(getDocument(path));
+	public static NorNode getNorNode(String path) {
+		NorNode norNode = null;
+		try {
+			norNode = getNoList(getDocument(path));
+		} catch (Exception e) {
+			norNode = new NorNode();
+			norNode.setErrMessage(e.getMessage());
+		}
+
+//		if (logger.isTraceEnabled())
+//			logger.trace("norNode : [{}]", norNode);
+
+		return norNode;
 	}
 
 	/**
@@ -141,18 +152,18 @@ public class XmlReader {
 		try { // Get a DOM parser from the Factory
 			builder = factory.newDocumentBuilder();
 		} catch (ParserConfigurationException e1) {
-			e1.printStackTrace();
-			throw new Exception("createDomParser - 1", e1);
+			// logger.error("createDomParser error1", e1);
+			throw new Exception(e1);
 		}
 
 		try { // Request the DOM parser to parse the file
 			return builder.parse(inputStream);
 		} catch (SAXException e2) {
-			e2.printStackTrace();
-			throw new Exception("createDomParser - 1", e2);
+			// logger.error("createDomParser error2", e2);
+			throw new Exception(e2);
 		} catch (IOException e3) {
-			e3.printStackTrace();
-			throw new Exception("createDomParser - 1", e3);
+			// logger.error("createDomParser error3", e3);
+			throw new Exception(e3);
 		}
 	}
 }

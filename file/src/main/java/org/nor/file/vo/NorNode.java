@@ -14,6 +14,7 @@ public class NorNode {
 	private List<NorNode> node;
 	private String tab;
 	private String cData;
+	private String errMessage;
 
 	public NorNode() {
 	}
@@ -97,6 +98,14 @@ public class NorNode {
 
 	public void setTab(String tab) {
 		this.tab = tab;
+	}
+	
+	public String getErrMessage() {
+		return errMessage;
+	}
+
+	public void setErrMessage(String errMessage) {
+		this.errMessage = errMessage;
 	}
 
 	public String toString() {

@@ -8,11 +8,13 @@ import org.nor.file.vo.NorNode;
 public class NorNodeUtil {
 
 	/**
+	 * <pre>
 	 * NorNode 내부에 특정 값을 가지는 값을 찾는다.
 	 * - key : id, name, type
 	 * 
 	 * 재귀호출하여 특정 값을 찾는다.
 	 * - NorNode - getNode(NorNode List)
+	 * </pre>
 	 * 
 	 * @param key
 	 * @param value
@@ -23,6 +25,13 @@ public class NorNodeUtil {
 	public static List<NorNode> getSearch(String key, String value, NorNode node, List<NorNode> rtnNode) {
 		if (rtnNode == null) {
 			rtnNode = new ArrayList<NorNode>();
+		}
+		
+		// 2016.05.21 SSH
+		// Error Message 가 있는 경우 더이상 재귀호출하지 않는다.
+		if (node.getErrMessage() != null && !"".equals(node.getErrMessage())) {
+			rtnNode.add(node);
+			return rtnNode;
 		}
 
 		if (value != null) {
