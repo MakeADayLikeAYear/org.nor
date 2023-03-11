@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="org.nor" />
+        <module name="file" />
+        <module name="fileSearch" />
+        <module name="string" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="file" target="1.8" />
+      <module name="fileSearch" target="1.5" />
+      <module name="org.nor" target="19" />
+      <module name="string" target="19" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
