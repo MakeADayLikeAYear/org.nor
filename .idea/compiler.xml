@@ -8,12 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="org.nor" />
         <module name="file" />
-        <module name="fileSearch" />
         <module name="string" />
+        <module name="file.search" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="file" target="1.8" />
+      <module name="file.search" target="1.5" />
       <module name="fileSearch" target="1.5" />
       <module name="org.nor" target="19" />
       <module name="string" target="19" />

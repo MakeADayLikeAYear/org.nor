@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/file/file.iml" filepath="$PROJECT_DIR$/file/file.iml" />
-      <module fileurl="file://$PROJECT_DIR$/fileSearch/fileSearch.iml" filepath="$PROJECT_DIR$/fileSearch/fileSearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/file.search/file.search.iml" filepath="$PROJECT_DIR$/file.search/file.search.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/org.nor.iml" filepath="$PROJECT_DIR$/.idea/org.nor.iml" />
       <module fileurl="file://$PROJECT_DIR$/string/string.iml" filepath="$PROJECT_DIR$/string/string.iml" />
     </modules>
