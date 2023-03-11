@@ -2,15 +2,17 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.nor</groupId>
-	<artifactId>string</artifactId>
+	<artifactId>org.nor.string</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
+	<name>org.nor.string</name>
 
-	<name>string</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>19</maven.compiler.source>
+		<maven.compiler.target>19</maven.compiler.target>
 	</properties>
 
 	<dependencies>

@@ -3,7 +3,7 @@
 	<groupId>org.nor</groupId>
 	<artifactId>org.nor.file</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>nor world</name>
+	<name>org.nor.file</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
